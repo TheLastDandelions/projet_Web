@@ -1,0 +1,87 @@
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+header {
+    background-color: black;
+    padding: 15px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    font-weight: bold;
+}
+header ul{
+    list-style: none;
+    display: flex;
+    gap: 40px;
+    padding: 0;
+    margin: 0;
+}
+header a {
+    color: white;
+    list-style: none;
+    text-decoration: none;
+}
+main {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+.biographie {
+    flex: 1;
+    display: flex;
+    background-color: #f2f2f2;
+    border: 2px grey;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+.realisation {
+    flex: 1;
+    display: flex;
+    background-color: #f2f2f2;
+    border: 2px grey;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+.anecdote {
+    flex: 1;
+    display: flex;
+    background-color: #f2f2f2;
+    border: 2px grey;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+.liens {
+     flex: 1;
+    display: flex;
+    background-color: #f2f2f2;
+    border: 2px grey;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+footer {
+    background-color: black;
+    padding: 15px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    font-weight: bold;
+}
+footer ul {
+    list-style: none;
+    text-decoration: none;
+    gap: 40px;
+    padding: 0;
+    margin: 0;
+}
+footer a {
+    color: white;
+    list-style: none;
+    text-decoration: none;
+}

@@ -1,6 +1,13 @@
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+}
 
 header {
-    background-color: grey;
+    background-color: black;
     padding: 15px 30px;
     display: flex;
     align-items: center;
@@ -12,22 +19,23 @@ header ul {
     list-style: none;
     display: flex;
     gap: 40px;
+    padding: 0;
+    margin: 0;
 }
 header a {
     color: white;
     list-style: none;
     text-decoration: none;
 }
-div {
-    
-}
+
 
 main{
+    flex: 1;
     max-width: 1000px;
     margin: 0 auto;
 }
-main a {
-    color: blue;
+.intro{
+    text-align: center;
 }
 .galerie {
     display: flex;
@@ -38,7 +46,11 @@ main a {
 .galerie article {
     flex: 1;
     display: flex;
+    background-color: #f2f2f2;
     flex-direction: column;
+    border: 2px  grey;
+    border-radius: 10px;
+    padding: 10px;
 }
 .galerie img {
     width: 100%;
