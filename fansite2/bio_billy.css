@@ -1,0 +1,48 @@
+/* Le style de base pour toute la page */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #1a1818;
+    color: #9146ff;
+    text-align: center; /* Centre tout le texte pour faire propre */
+}
+header {
+    background-color: #18181f;
+    padding: 25px 20px;
+    text-align: center;
+    border-bottom: 3px solid #9146ff; /* Touche violette style Twitch */
+}
+nav a {
+    color: whitesmoke;
+    text-decoration: none;
+    margin: 15px;
+    font-weight: bold;
+}
+
+/* Les images */
+img {
+    width: 100%;
+    max-width: 400px; /* Empêche l'image d'être trop grande */
+    height: auto;
+    border-radius: 8px;
+    border: 6px solid black
+}
+
+/* Les blocs articles */
+.article {
+    background: rgb(0, 0, 0);
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
+
+/* Le pied de page */
+footer {
+    background-color:  #18181f;
+    padding: 20px;
+    margin-top: 40px;
+    color: #9146ff;
+    font-size: 14px;
+    border-top: 3px solid #9146ff;
+}
