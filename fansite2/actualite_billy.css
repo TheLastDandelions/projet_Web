@@ -1,5 +1,8 @@
 /* Le style de base pour toute la page */
 body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
@@ -12,6 +15,9 @@ header {
     padding: 25px 20px;
     text-align: center;
     border-bottom: 3px solid #9146ff; /* Touche violette style Twitch */
+}
+main {
+    flex : 1
 }
 nav a {
     color: whitesmoke;
@@ -45,4 +51,5 @@ footer {
     color: #9146ff;
     font-size: 14px;
     border-top: 3px solid #9146ff;
+    
 }
