@@ -12,29 +12,49 @@ body {
 }
 header {
     background-color: #18181f;
-    padding: 25px 20px;
+    padding: 25px ;
     text-align: center;
     border-bottom: 3px solid #9146ff; /* Touche violette style Twitch */
-
+    margin-bottom: 40px;
+    
+}
 main {
     flex: 1;
 }
-}
+
 nav a {
+    flex-wrap: wrap;
     color: whitesmoke;
     text-decoration: none;
     margin: 15px;
     font-weight: bold;
+    padding: 10px ;
+    border: 2px solid  #9146ff;
+    border-radius: 50px;
+    
 }
 
-/* Les images */
-img {
-    width: 100%;
-    max-width: 400px; /* Empêche l'image d'être trop grande */
-    height: auto;
-    border-radius: 8px;
-    border: 6px solid black
+
+/* Galerie des 4 images */
+.galerie {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 20px;
+    justify-items: center;
 }
+
+/* Images */
+.galerie img {
+    width: 100%;
+    max-width: 400px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 6px solid black;
+    box-sizing: border-box;
+}
+
 
 /* Les blocs articles */
 .article {
@@ -50,7 +70,64 @@ footer {
     padding: 20px;
     margin-top: 40px;
     color: #9146ff;
+    font-weight: lighter;
     font-size: 14px;
     border-top: 3px solid #9146ff;
     
 }
+/* Tablettes */
+@media screen and (max-width: 900px) {
+
+    header {
+        padding: 20px 10px;
+    }
+
+    header h1 {
+        font-size: 32px;
+    }
+
+    nav a {
+        padding: 8px 14px;
+        font-size: 15px;
+    }
+
+}
+
+/* Téléphones */
+@media screen and (max-width: 600px) {
+
+    header {
+        padding: 15px 10px;
+    }
+
+    header h1 {
+        font-size: 26px;
+    }
+
+    nav {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    nav a {
+        width: 80%;
+        max-width: 280px;
+        box-sizing: border-box;
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    main {
+        padding: 15px;
+    }
+
+    footer {
+        padding: 15px 5px;
+    }
+
+    footer nav {
+        flex-direction: column;
+    }
+
+}
+

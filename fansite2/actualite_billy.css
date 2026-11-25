@@ -17,7 +17,8 @@ header {
     border-bottom: 3px solid #9146ff; /* Touche violette style Twitch */
 }
 main {
-    flex : 1
+    flex: 1;
+
 }
 nav a {
     color: whitesmoke;
@@ -33,6 +34,7 @@ img {
     height: auto;
     border-radius: 8px;
     border: 6px solid black
+    
 }
 
 /* Les blocs articles */
@@ -51,5 +53,6 @@ footer {
     color: #9146ff;
     font-size: 14px;
     border-top: 3px solid #9146ff;
+    
     
 }
