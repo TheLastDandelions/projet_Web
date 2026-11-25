@@ -5,10 +5,11 @@ body {
     margin: 0;
     padding: 0;
 }
-
 header {
-    background-color: black;
-    padding: 15px 30px;
+    background-color: #18181f;
+    padding: 25px 20px;
+    text-align: center;
+    border-bottom: 3px solid #9146ff; /* Touche violette style Twitch */
     display: flex;
     align-items: center;
     justify-content: center;

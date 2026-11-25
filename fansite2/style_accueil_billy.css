@@ -15,11 +15,11 @@ header {
     padding: 25px 20px;
     text-align: center;
     border-bottom: 3px solid #9146ff; /* Touche violette style Twitch */
-
+}
 main {
     flex: 1;
 }
-}
+
 nav a {
     color: whitesmoke;
     text-decoration: none;
