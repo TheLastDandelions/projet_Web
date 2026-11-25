@@ -1,0 +1,135 @@
+
+/* STYLE GENERAL */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #222;
+}
+
+/* EN-TETE */
+header {
+    background-color: #111;
+    color: white;
+    text-align: center;
+    padding: 30px;
+}
+
+header h1 {
+    font-size: 38px;
+    letter-spacing: 3px;
+    margin-bottom: 10px;
+}
+
+header p {
+    color: #bbb;
+    font-size: 15px;
+}
+
+/* MENU */
+nav {
+    background-color: #111;
+    text-align: center;
+    padding: 18px;
+    border-top: 1px solid #333;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 15px;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+nav a:hover {
+    color: #999;
+}
+
+/* CONTENU PRINCIPAL */
+main {
+    width: 85%;
+    max-width: 1100px;
+    margin: 50px auto;
+}
+
+/* SECTIONS */
+section {
+    background-color: white;
+    padding: 35px;
+    margin-bottom: 30px;
+    border-radius: 5px;
+}
+
+/* ACCUEIL : PHOTO A GAUCHE, TEXTE A DROITE */
+#accueil {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+#accueil img {
+    width: 40%;
+    max-width: 350px;
+    height: auto;
+    border-radius: 5px;
+}
+
+#accueil h2 {
+    font-size: 30px;
+    text-transform: uppercase;
+}
+
+/* AUTRES TITRES */
+h2 {
+    color: #111;
+    font-size: 25px;
+    border-bottom: 2px solid #222;
+    padding-bottom: 12px;
+}
+
+/* PARAGRAPHES */
+p {
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+/* LISTES */
+ul {
+    line-height: 2.2;
+}
+
+/* PIED DE PAGE */
+footer {
+    background-color: #111;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* VERSION TELEPHONE */
+@media screen and (max-width: 700px) {
+
+    main {
+        width: 92%;
+    }
+
+    #accueil {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #accueil img {
+        width: 100%;
+    }
+
+    nav a {
+        display: inline-block;
+        margin: 8px;
+    }
+}
