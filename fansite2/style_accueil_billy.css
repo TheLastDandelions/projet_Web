@@ -1,107 +1,149 @@
-/* Le style de base pour toute la page */
-body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    font-family: Arial, sans-serif;
+/* Réinitialisation et style global */
+* {
     margin: 0;
     padding: 0;
-    background-color: #1a1818;
-    color: #9146ff;
-    text-align: center; /* Centre tout le texte pour faire propre */
-}
-header {
-    background-color: #18181f;
-    text-align: center;
-    border-bottom: 3px solid #9146ff; /* Touche violette style Twitch */
-    margin-bottom: 40px;
-    
-}
-main {
-    flex: 1;
-}
-nav {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    width: 100%;
-}
-nav a {
-    display: inline-block;
-    color: whitesmoke;
-    text-decoration: none;
-    margin: 0;
-    padding: 10px 18px;
-    font-weight: bold;
-    border: 2px solid white;
-    border-radius: 30px;
-}
-
-nav a {
-    flex-wrap: wrap;
-    color: whitesmoke;
-    text-decoration: none;
-    margin: 15px;
-    font-weight: bold;
-    padding: 10px ;
-    border: 2px solid  #9146ff;
-    border-radius: 50px;
-    
-}
-
-
-/* Galerie des 4 images */
-.galerie {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
-    padding: 20px;
-    justify-items: center;
-}
-
-/* Images */
-.galerie img {
-    width: 100%;
-    max-width: 400px;
-    height: 300px;
-    object-fit: cover;
-    border-radius: 8px;
-    border: 6px solid black;
     box-sizing: border-box;
 }
 
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #0f0f13;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
 
-/* Les blocs articles */
-.article {
-    background: rgb(0, 0, 0);
-    padding: 20px;
+/* --- HEADER & ONGLETS --- */
+header {
+    background-color: #18181f;
+    padding: 25px 20px;
+    text-align: center;
+    border-bottom: 3px solid #9146ff; /* Touche violette style Twitch */
+}
+
+header h1 {
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
     margin-bottom: 20px;
-    border-radius: 8px;
+    color: #ffffff;
 }
 
-/* Le pied de page */
-footer {
-    background-color:  #18181f;
-    padding: 20px;
-    margin-top: 40px;
-    color: #9146ff;
-    font-weight: lighter;
-    font-size: 14px;
-    border-top: 3px solid #9146ff;
-    
+header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
 }
-/* Tablettes */
-@media screen and (max-width: 900px) {
-    .galerie {
-        grid-template-columns: repeat(2, 1fr);
+
+header nav ul li a {
+    text-decoration: none;
+    color: #e0e0e0;
+    background-color: #262630;
+    padding: 10px 22px;
+    border-radius: 25px;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    display: inline-block;
+}
+
+header nav ul li a:hover,
+header nav ul li a.actif {
+    background-color: #9146ff;
+    color: #ffffff;
+    transform: translateY(-2px);
+}
+
+/* --- GALERIE DE 4 PHOTOS --- */
+main {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 20px;
+}
+
+.galerie-photos {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 colonnes égales sur grand écran */
+    gap: 25px;
+    max-width: 1200px;
+    width: 100%;
+}
+
+.carte-photo {
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
+    border: 2px solid #262630;
+    aspect-ratio: 3 / 4; /* Donne un format portrait uniforme aux 4 photos */
+    transition: border-color 0.3s ease, transform 0.3s ease;
+}
+
+.carte-photo:hover {
+    border-color: #9146ff;
+    transform: translateY(-8px);
+}
+
+.carte-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Recadre proprement sans déformer l'image */
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+.carte-photo:hover img {
+    transform: scale(1.06);
+}
+
+/* --- FOOTER --- */
+footer {
+    background-color: #18181f;
+    padding: 25px 20px;
+    text-align: center;
+    border-top: 1px solid #262630;
+}
+
+footer nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 15px;
+}
+
+footer nav ul li a {
+    color: #a970ff;
+    text-decoration: none;
+    font-size: 0.95rem;
+}
+
+footer nav ul li a:hover {
+    text-decoration: underline;
+}
+
+footer p {
+    color: #888899;
+    font-size: 0.85rem;
+}
+
+/* --- RESPONSIVE (Tablette et Mobile) --- */
+@media (max-width: 900px) {
+    .galerie-photos {
+        grid-template-columns: repeat(2, 1fr); /* 2 photos par ligne sur tablette */
     }
 }
 
-/* Téléphones */
-@media screen and (max-width: 600px) {
-    .galerie {
-        grid-template-columns: 1fr;
+@media (max-width: 500px) {
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    .galerie-photos {
+        grid-template-columns: 1fr; /* 1 photo par ligne sur smartphone */
     }
 }
