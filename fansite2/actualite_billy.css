@@ -71,14 +71,24 @@ main {
     width: 85%;
     margin: 0 auto;
 }
+.texte h2 {
+    margin-bottom: 20px;
+}
 
 .texte {
     text-align: left;
     color: whitesmoke;
 }
+/* Espace entre chaque paragraphe et entre les lignes */
+.texte p {
+    margin-bottom: 18px;
+    line-height: 1.6;
+}
 
 .conteneur img {
-    width: 300px;
+    width: 280px;
+    border-radius: 10px;
+    border: 2px solid #9146ff;
 }
 /* --- FOOTER --- */
 footer {

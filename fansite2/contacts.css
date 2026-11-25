@@ -1,0 +1,247 @@
+/* Réinitialisation et style global */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #0f0f13;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* --- HEADER & ONGLETS --- */
+header {
+    background-color: #18181f;
+    padding: 25px 20px;
+    text-align: center;
+    border-bottom: 3px solid #9146ff;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #e0e0e0;
+    background-color: #262630;
+    padding: 10px 22px;
+    border-radius: 25px;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    display: inline-block;
+}
+
+header nav ul li a:hover,
+header nav ul li a.actif {
+    background-color: #9146ff;
+    color: #ffffff;
+    transform: translateY(-2px);
+}
+
+/* --- CONTENU PRINCIPAL (2 COLONNES) --- */
+main {
+    flex: 1;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 50px 20px;
+    display: flex;
+    align-items: center;
+}
+
+.conteneur-contact {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 35px;
+    width: 100%;
+}
+
+.bloc-reseaux,
+.bloc-formulaire {
+    background-color: #18181f;
+    border: 2px solid #262630;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
+}
+
+.bloc-reseaux h2,
+.bloc-formulaire h2 {
+    font-size: 1.7rem;
+    color: #ffffff;
+    border-left: 5px solid #9146ff;
+    padding-left: 15px;
+    margin-bottom: 10px;
+}
+
+.sous-titre {
+    color: #a0a0b0;
+    font-size: 0.95rem;
+    margin-bottom: 25px;
+    padding-left: 20px;
+    line-height: 1.5;
+}
+
+/* --- CARTES RÉSEAUX SOCIAUX --- */
+.liste-reseaux {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.carte-reseau {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    background-color: #0f0f13;
+    border: 2px solid #262630;
+    border-radius: 12px;
+    padding: 16px 20px;
+    text-decoration: none;
+    transition: border-color 0.3s ease, transform 0.2s ease;
+}
+
+.carte-reseau:hover {
+    border-color: #9146ff;
+    transform: translateX(6px);
+}
+
+.nom-plateforme {
+    color: #9146ff;
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+.pseudo {
+    color: #e0e0e0;
+    font-size: 0.92rem;
+}
+
+/* --- FORMULAIRE DE CONTACT --- */
+.formulaire-contact {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.champ {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.champ label {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #e0e0e0;
+}
+
+.champ input,
+.champ select,
+.champ textarea {
+    background-color: #0f0f13;
+    border: 2px solid #262630;
+    border-radius: 10px;
+    padding: 12px 15px;
+    color: #ffffff;
+    font-family: inherit;
+    font-size: 0.95rem;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.champ input:focus,
+.champ select:focus,
+.champ textarea:focus {
+    border-color: #9146ff;
+}
+
+.champ textarea {
+    resize: vertical;
+}
+
+.bouton-envoyer {
+    background-color: #9146ff;
+    color: #ffffff;
+    border: none;
+    border-radius: 25px;
+    padding: 14px 25px;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    margin-top: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.bouton-envoyer:hover {
+    background-color: #772ce8;
+    transform: translateY(-2px);
+}
+
+/* --- FOOTER --- */
+footer {
+    background-color: #18181f;
+    padding: 25px 20px;
+    text-align: center;
+    border-top: 1px solid #262630;
+}
+
+footer nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 15px;
+}
+
+footer nav ul li a {
+    color: #a970ff;
+    text-decoration: none;
+    font-size: 0.95rem;
+}
+
+footer nav ul li a:hover {
+    text-decoration: underline;
+}
+
+footer p {
+    color: #888899;
+    font-size: 0.85rem;
+}
+
+/* --- RESPONSIVE (Tablette et Mobile) --- */
+@media (max-width: 850px) {
+    .conteneur-contact {
+        grid-template-columns: 1fr; /* Empile les deux blocs sur tablette et mobile */
+    }
+}
+
+@media (max-width: 500px) {
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    .bloc-reseaux,
+    .bloc-formulaire {
+        padding: 20px;
+    }
+}
