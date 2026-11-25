@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
     display: flex;
     flex-direction: column;
@@ -7,10 +11,9 @@ body {
 }
 header {
     background-color: #18181f;
-    padding: 25px 20px;
+    padding: 5px 0;
     text-align: center;
-    border-bottom: 3px solid #9146ff; /* Touche violette style Twitch */
-    display: flex;
+    border-bottom: 3px solid #9146ff; 
     align-items: center;
     justify-content: center;
     font-size: 30px;
@@ -19,6 +22,8 @@ header {
 header ul {
     list-style: none;
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 40px;
     padding: 0;
     margin: 0;
@@ -32,6 +37,7 @@ header a {
 
 main{
     flex: 1;
+    width: 92%;
     max-width: 1000px;
     margin: 0 auto;
 }
@@ -49,7 +55,7 @@ main{
     display: flex;
     background-color: #f2f2f2;
     flex-direction: column;
-    border: 2px  grey;
+    border: 2px solid grey;
     border-radius: 10px;
     padding: 10px;
 }
@@ -58,4 +64,16 @@ main{
     height: auto;
     margin-top: auto;
     border-radius: 8px;
+}
+
+@media (max-width: 768px) {
+    header {
+        font-size: 20px;
+    }
+    header ul {
+        gap: 15px;
+    }
+    .galerie {
+        flex-direction: column;
+    }
 }
