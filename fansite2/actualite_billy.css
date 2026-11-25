@@ -12,30 +12,63 @@ body {
 }
 header {
     background-color: #18181f;
-    padding: 25px 20px;
     text-align: center;
     border-bottom: 3px solid #9146ff; /* Touche violette style Twitch */
+    margin-bottom: 40px;
+    
 }
 main {
     flex: 1;
+}
+.conteneur {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+    width: 85%;
+    margin: 0 auto;
+}
 
+.texte {
+    text-align: left;
+    color: whitesmoke;
+}
+
+.conteneur img {
+    width: 250px;
+}
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
 }
 nav a {
+    display: inline-block;
+    color: whitesmoke;
+    text-decoration: none;
+    margin: 0;
+    padding: 10px 18px;
+    font-weight: bold;
+    border: 2px solid white;
+    border-radius: 30px;
+}
+
+nav a {
+    flex-wrap: wrap;
     color: whitesmoke;
     text-decoration: none;
     margin: 15px;
     font-weight: bold;
-}
-
-/* Les images */
-img {
-    width: 100%;
-    max-width: 400px; /* Empêche l'image d'être trop grande */
-    height: auto;
-    border-radius: 8px;
-    border: 6px solid black
+    padding: 10px ;
+    border: 2px solid  #9146ff;
+    border-radius: 50px;
     
 }
+
 
 /* Les blocs articles */
 .article {
@@ -51,8 +84,21 @@ footer {
     padding: 20px;
     margin-top: 40px;
     color: #9146ff;
+    font-weight: lighter;
     font-size: 14px;
     border-top: 3px solid #9146ff;
     
-    
+}
+/* Tablettes */
+@media screen and (max-width: 900px) {
+    .galerie {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Téléphones */
+@media screen and (max-width: 600px) {
+    .galerie {
+        grid-template-columns: 1fr;
+    }
 }
