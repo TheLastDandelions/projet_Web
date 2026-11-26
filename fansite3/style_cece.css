@@ -5,92 +5,110 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
-    color: #222;
+    font-family: Arial, sans-serif;
+    background-color: #18181f;
+    color: white;
 }
 
 /* EN-TETE */
 header {
-    background-color: #111;
+    background-color: #18181f;
     color: white;
     text-align: center;
-    padding: 30px;
+    padding: 20px 15px 10px;
 }
 
 header h1 {
-    font-size: 38px;
+    font-size: 36px;
     letter-spacing: 3px;
-    margin-bottom: 10px;
+    margin: 10px 0;
 }
 
 header p {
     color: #bbb;
-    font-size: 15px;
+    font-size: 14px;
+    letter-spacing: 2px;
 }
 
-/* MENU */
+/* MENU DE NAVIGATION */
 nav {
-    background-color: #111;
+    background-color: #18181f;
     text-align: center;
-    padding: 18px;
-    border-top: 1px solid #333;
+    padding: 15px;
+    border-bottom: 3px solid #9146ff;
 }
 
 nav a {
+    display: inline-block;
     color: white;
     text-decoration: none;
-    margin: 15px;
-    font-size: 14px;
+    margin: 8px 18px;
+    font-size: 15px;
+    font-weight: bold;
     text-transform: uppercase;
 }
 
 nav a:hover {
-    color: #999;
+    color: #9146ff;
 }
 
 /* CONTENU PRINCIPAL */
 main {
-    width: 85%;
-    max-width: 1100px;
-    margin: 50px auto;
+    flex: 1;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px 15px;
 }
 
 /* SECTIONS */
 section {
-    background-color: white;
-    padding: 35px;
-    margin-bottom: 30px;
-    border-radius: 5px;
+    background-color: #262630;
+    border: 2px solid grey;
+    border-radius: 10px;
+    padding: 25px;
+    margin: 30px 0;
+    text-align: left;
 }
 
-/* ACCUEIL : PHOTO A GAUCHE, TEXTE A DROITE */
+/* TITRES */
+h2 {
+    color: white;
+    font-size: 25px;
+    text-align: center;
+    border-bottom: 2px solid #9146ff;
+    padding-bottom: 12px;
+}
+
+h3 {
+    color: white;
+}
+
+/* PAGE BIOGRAPHIE */
 #accueil {
     display: flex;
     align-items: center;
-    gap: 40px;
+    gap: 30px;
 }
 
 #accueil img {
     width: 40%;
     max-width: 350px;
     height: auto;
-    border-radius: 5px;
+    border-radius: 8px;
+}
+
+#accueil div {
+    flex: 1;
 }
 
 #accueil h2 {
-    font-size: 30px;
-    text-transform: uppercase;
-}
-
-/* AUTRES TITRES */
-h2 {
-    color: #111;
-    font-size: 25px;
-    border-bottom: 2px solid #222;
-    padding-bottom: 12px;
+    margin-top: 0;
 }
 
 /* PARAGRAPHES */
@@ -99,24 +117,64 @@ p {
     line-height: 1.8;
 }
 
-/* LISTES */
-ul {
-    line-height: 2.2;
+/* BOUTON */
+.bouton {
+    display: inline-block;
+    background-color: #18181f;
+    color: white;
+    border: 2px solid #9146ff;
+    border-radius: 6px;
+    padding: 12px 20px;
+    margin-top: 15px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.bouton:hover {
+    background-color: #9146ff;
+    color: white;
 }
 
 /* PIED DE PAGE */
 footer {
-    background-color: #111;
+    background-color: #18181f;
     color: white;
     text-align: center;
     padding: 20px;
+    border-top: 3px solid #9146ff;
+}
+
+footer h3 {
+    margin-top: 5px;
+}
+
+footer p {
+    color: #bbb;
+    font-size: 14px;
 }
 
 /* VERSION TELEPHONE */
-@media screen and (max-width: 700px) {
+@media (max-width: 768px) {
+
+    header h1 {
+        font-size: 28px;
+    }
+
+    nav {
+        padding: 10px;
+    }
+
+    nav a {
+        margin: 8px;
+        font-size: 13px;
+    }
 
     main {
-        width: 92%;
+        padding: 10px;
+    }
+
+    section {
+        padding: 18px;
     }
 
     #accueil {
@@ -126,10 +184,10 @@ footer {
 
     #accueil img {
         width: 100%;
+        max-width: 300px;
     }
 
-    nav a {
-        display: inline-block;
-        margin: 8px;
+    #accueil h2 {
+        font-size: 23px;
     }
 }
