@@ -1,4 +1,8 @@
-/* Réinitialisation et style global */
+
+/* =================================
+   RÉINITIALISATION ET STYLE GLOBAL
+================================= */
+
 * {
     margin: 0;
     padding: 0;
@@ -9,12 +13,17 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #0f0f13;
     color: #ffffff;
+
     display: flex;
     flex-direction: column;
     min-height: 100vh;
 }
 
-/* --- HEADER & ONGLETS --- */
+
+/* =================================
+   HEADER ET NAVIGATION
+================================= */
+
 header {
     background-color: #18181f;
     padding: 25px 20px;
@@ -34,35 +43,43 @@ header nav ul {
     list-style: none;
     display: flex;
     justify-content: center;
+    align-items: center;
     flex-wrap: wrap;
     gap: 15px;
 }
 
 header nav ul li a {
+    display: inline-block;
     text-decoration: none;
     color: #e0e0e0;
     background-color: #262630;
     padding: 10px 22px;
+    border: 2px solid transparent;
     border-radius: 25px;
     font-weight: 600;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-    display: inline-block;
+    transition: all 0.3s ease;
 }
 
 header nav ul li a:hover,
 header nav ul li a.actif {
     background-color: #9146ff;
+    border-color: #ffffff;
     color: #ffffff;
     transform: translateY(-2px);
 }
 
-/* --- CONTENU PRINCIPAL --- */
+
+/* =================================
+   CONTENU PRINCIPAL
+================================= */
+
 main {
     flex: 1;
     max-width: 1200px;
     width: 100%;
     margin: 0 auto;
     padding: 50px 20px;
+
     display: flex;
     flex-direction: column;
     gap: 60px;
@@ -83,10 +100,14 @@ main {
     font-size: 1rem;
 }
 
-/* --- GRILLE DES VIDÉOS (3 colonnes) --- */
+
+/* =================================
+   GRILLE DES VIDÉOS
+================================= */
+
 .grille-videos {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 25px;
 }
 
@@ -95,14 +116,19 @@ main {
     border-radius: 15px;
     overflow: hidden;
     border: 2px solid #262630;
+
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
-    transition: border-color 0.3s ease, transform 0.3s ease;
+
+    transition: border-color 0.3s ease,
+                transform 0.3s ease;
 }
 
 .carte-video:hover {
     border-color: #9146ff;
     transform: translateY(-6px);
 }
+
+/* Conteneur vidéo */
 
 .conteneur-video {
     width: 100%;
@@ -114,8 +140,9 @@ main {
 .conteneur-video video {
     width: 100%;
     height: 100%;
-    object-fit: cover;
     display: block;
+    object-fit: contain;
+    background-color: #000000;
 }
 
 .carte-video h3 {
@@ -124,10 +151,14 @@ main {
     color: #f0f0f5;
 }
 
-/* --- GALERIE DE PHOTOS (4 colonnes) --- */
+
+/* =================================
+   GALERIE PHOTOS
+================================= */
+
 .galerie-photos {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(4, minmax(0, 1fr));
     gap: 25px;
 }
 
@@ -138,7 +169,9 @@ main {
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
     border: 2px solid #262630;
     aspect-ratio: 3 / 4;
-    transition: border-color 0.3s ease, transform 0.3s ease;
+
+    transition: border-color 0.3s ease,
+                transform 0.3s ease;
 }
 
 .carte-photo:hover {
@@ -164,13 +197,23 @@ main {
     left: 0;
     width: 100%;
     padding: 12px 15px;
-    background: linear-gradient(to top, rgba(15, 15, 19, 0.95), rgba(15, 15, 19, 0));
+
+    background: linear-gradient(
+        to top,
+        rgba(15, 15, 19, 0.95),
+        rgba(15, 15, 19, 0)
+    );
+
     color: #ffffff;
     font-size: 0.9rem;
     font-weight: 600;
 }
 
-/* --- FOOTER --- */
+
+/* =================================
+   FOOTER
+================================= */
+
 footer {
     background-color: #18181f;
     padding: 25px 20px;
@@ -182,6 +225,7 @@ footer nav ul {
     list-style: none;
     display: flex;
     justify-content: center;
+    align-items: center;
     flex-wrap: wrap;
     gap: 20px;
     margin-bottom: 15px;
@@ -194,6 +238,7 @@ footer nav ul li a {
 }
 
 footer nav ul li a:hover {
+    color: #ffffff;
     text-decoration: underline;
 }
 
@@ -202,27 +247,107 @@ footer p {
     font-size: 0.85rem;
 }
 
-/* --- RESPONSIVE (Tablette et Mobile) --- */
-@media (max-width: 900px) {
+
+/* =================================
+   RESPONSIVE TABLETTES
+================================= */
+
+@media screen and (max-width: 900px) {
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    header nav ul {
+        gap: 10px;
+    }
+
+    header nav ul li a {
+        padding: 9px 15px;
+        font-size: 0.9rem;
+    }
+
     .grille-videos {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
     .galerie-photos {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2, minmax(0, 1fr));
     }
+
 }
 
-@media (max-width: 550px) {
+
+/* =================================
+   RESPONSIVE TÉLÉPHONES
+================================= */
+
+@media screen and (max-width: 550px) {
+
+    header {
+        padding: 20px 12px;
+    }
+
     header h1 {
-        font-size: 1.8rem;
+        font-size: 1.6rem;
+        letter-spacing: 1px;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    header nav ul li {
+        width: 100%;
+    }
+
+    header nav ul li a {
+        width: 85%;
+        max-width: 280px;
+        padding: 10px;
+        font-size: 0.9rem;
+    }
+
+    main {
+        padding: 30px 15px;
+        gap: 40px;
+    }
+
+    .section-media h2 {
+        font-size: 1.5rem;
+    }
+
+    .sous-titre {
+        font-size: 0.9rem;
+        padding-left: 10px;
     }
 
     .grille-videos {
         grid-template-columns: 1fr;
+        gap: 20px;
     }
 
     .galerie-photos {
         grid-template-columns: 1fr;
+        gap: 20px;
     }
+
+    .carte-photo {
+        aspect-ratio: 4 / 3;
+    }
+
+    footer {
+        padding: 20px 10px;
+    }
+
+    footer nav ul {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    footer p {
+        font-size: 0.75rem;
+    }
+
 }
