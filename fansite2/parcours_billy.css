@@ -62,6 +62,7 @@ main {
     justify-content: center;
     padding: 50px 20px;
 }
+
 .conteneur {
     display: flex;
     flex-direction: row-reverse;
@@ -75,6 +76,15 @@ main {
 .texte {
     text-align: left;
     color: whitesmoke;
+}
+.texte h2{
+    margin-bottom: 20px;
+}
+
+/* Espace entre chaque paragraphe et entre les lignes */
+.texte p {
+    margin-bottom: 18px;
+    line-height: 1.6;
 }
 
 .conteneur img {

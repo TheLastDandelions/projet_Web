@@ -86,9 +86,7 @@ main {
 }
 
 .conteneur img {
-    width: 280px;
-    border-radius: 10px;
-    border: 2px solid #9146ff;
+    width: 300px;
 }
 /* --- FOOTER --- */
 footer {
