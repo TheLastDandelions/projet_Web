@@ -19,7 +19,7 @@ header {
     background-color: #18181f;
     padding: 25px 20px;
     text-align: center;
-    border-bottom: 3px solid #9146ff; /* Touche violette style Twitch */
+    border-bottom: 3px solid #9146ff;
 }
 
 header h1 {
@@ -56,7 +56,7 @@ header nav ul li a.actif {
     transform: translateY(-2px);
 }
 
-/* --- GALERIE DE 4 PHOTOS --- */
+/* --- GALERIE DE 4 PHOTOS (Responsive Grid) --- */
 main {
     flex: 1;
     display: flex;
@@ -67,7 +67,7 @@ main {
 
 .galerie-photos {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* 4 colonnes égales sur grand écran */
+    grid-template-columns: repeat(4, 1fr); /* 4 colonnes sur grand écran */
     gap: 25px;
     max-width: 1200px;
     width: 100%;
@@ -78,7 +78,7 @@ main {
     border-radius: 15px;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
     border: 2px solid #262630;
-    aspect-ratio: 3 / 4; /* Donne un format portrait uniforme aux 4 photos */
+    aspect-ratio: 3 / 4;
     transition: border-color 0.3s ease, transform 0.3s ease;
 }
 
@@ -90,7 +90,7 @@ main {
 .carte-photo img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Recadre proprement sans déformer l'image */
+    object-fit: cover;
     display: block;
     transition: transform 0.4s ease;
 }
@@ -134,7 +134,7 @@ footer p {
 /* --- RESPONSIVE (Tablette et Mobile) --- */
 @media (max-width: 900px) {
     .galerie-photos {
-        grid-template-columns: repeat(2, 1fr); /* 2 photos par ligne sur tablette */
+        grid-template-columns: repeat(2, 1fr); /* 2 colonnes sur tablette */
     }
 }
 
@@ -144,6 +144,6 @@ footer p {
     }
 
     .galerie-photos {
-        grid-template-columns: 1fr; /* 1 photo par ligne sur smartphone */
+        grid-template-columns: 1fr; /* 1 colonne sur smartphone */
     }
 }

@@ -1,4 +1,3 @@
-/* Réinitialisation et style global */
 * {
     margin: 0;
     padding: 0;
@@ -14,7 +13,6 @@ body {
     min-height: 100vh;
 }
 
-/* --- HEADER & ONGLETS --- */
 header {
     background-color: #18181f;
     padding: 25px 20px;
@@ -45,7 +43,7 @@ header nav ul li a {
     padding: 10px 22px;
     border-radius: 25px;
     font-weight: 600;
-    transition: background-color 0.3s ease, transform 0.2s ease;
+    transition: background-color 0.3s ease;
     display: inline-block;
 }
 
@@ -53,10 +51,8 @@ header nav ul li a:hover,
 header nav ul li a.actif {
     background-color: #9146ff;
     color: #ffffff;
-    transform: translateY(-2px);
 }
 
-/* --- CONTENU PRINCIPAL (2 COLONNES) --- */
 main {
     flex: 1;
     max-width: 1200px;
@@ -69,7 +65,7 @@ main {
 
 .conteneur-contact {
     display: grid;
-    grid-template-columns: 1fr 1.2fr;
+    grid-template-columns: 1fr 1.2fr; /* Grille 2 colonnes */
     gap: 35px;
     width: 100%;
 }
@@ -80,7 +76,6 @@ main {
     border: 2px solid #262630;
     border-radius: 15px;
     padding: 30px;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
 }
 
 .bloc-reseaux h2,
@@ -96,11 +91,9 @@ main {
     color: #a0a0b0;
     font-size: 0.95rem;
     margin-bottom: 25px;
-    padding-left: 20px;
     line-height: 1.5;
 }
 
-/* --- CARTES RÉSEAUX SOCIAUX --- */
 .liste-reseaux {
     display: flex;
     flex-direction: column;
@@ -116,12 +109,11 @@ main {
     border-radius: 12px;
     padding: 16px 20px;
     text-decoration: none;
-    transition: border-color 0.3s ease, transform 0.2s ease;
+    transition: border-color 0.3s ease;
 }
 
 .carte-reseau:hover {
     border-color: #9146ff;
-    transform: translateX(6px);
 }
 
 .nom-plateforme {
@@ -135,7 +127,6 @@ main {
     font-size: 0.92rem;
 }
 
-/* --- FORMULAIRE DE CONTACT --- */
 .formulaire-contact {
     display: flex;
     flex-direction: column;
@@ -165,17 +156,12 @@ main {
     font-family: inherit;
     font-size: 0.95rem;
     outline: none;
-    transition: border-color 0.3s ease;
 }
 
 .champ input:focus,
 .champ select:focus,
 .champ textarea:focus {
     border-color: #9146ff;
-}
-
-.champ textarea {
-    resize: vertical;
 }
 
 .bouton-envoyer {
@@ -187,16 +173,13 @@ main {
     font-size: 1rem;
     font-weight: 700;
     cursor: pointer;
-    margin-top: 5px;
-    transition: background-color 0.3s ease, transform 0.2s ease;
+    transition: background-color 0.3s ease;
 }
 
 .bouton-envoyer:hover {
     background-color: #772ce8;
-    transform: translateY(-2px);
 }
 
-/* --- FOOTER --- */
 footer {
     background-color: #18181f;
     padding: 25px 20px;
@@ -216,11 +199,6 @@ footer nav ul {
 footer nav ul li a {
     color: #a970ff;
     text-decoration: none;
-    font-size: 0.95rem;
-}
-
-footer nav ul li a:hover {
-    text-decoration: underline;
 }
 
 footer p {
@@ -228,20 +206,9 @@ footer p {
     font-size: 0.85rem;
 }
 
-/* --- RESPONSIVE (Tablette et Mobile) --- */
+/* Responsive pour les contacts */
 @media (max-width: 850px) {
     .conteneur-contact {
-        grid-template-columns: 1fr; /* Empile les deux blocs sur tablette et mobile */
-    }
-}
-
-@media (max-width: 500px) {
-    header h1 {
-        font-size: 1.8rem;
-    }
-
-    .bloc-reseaux,
-    .bloc-formulaire {
-        padding: 20px;
+        grid-template-columns: 1fr; /* Empile les blocs sur tablette/mobile */
     }
 }

@@ -19,7 +19,7 @@ header {
     background-color: #18181f;
     padding: 25px 20px;
     text-align: center;
-    border-bottom: 3px solid #9146ff; /* Touche violette style Twitch */
+    border-bottom: 3px solid #9146ff;
 }
 
 header h1 {
@@ -55,6 +55,7 @@ header nav ul li a.actif {
     color: #ffffff;
     transform: translateY(-2px);
 }
+
 main {
     flex: 1;
     display: flex;
@@ -62,6 +63,7 @@ main {
     justify-content: center;
     padding: 50px 20px;
 }
+
 .conteneur {
     display: flex;
     flex-direction: row;
@@ -71,15 +73,16 @@ main {
     width: 85%;
     margin: 0 auto;
 }
-.texte h2 {
-    margin-bottom: 20px;
-}
 
 .texte {
     text-align: left;
     color: whitesmoke;
 }
-/* Espace entre chaque paragraphe et entre les lignes */
+
+.texte h2 {
+    margin-bottom: 20px;
+}
+
 .texte p {
     margin-bottom: 18px;
     line-height: 1.6;
@@ -87,7 +90,9 @@ main {
 
 .conteneur img {
     width: 300px;
+    border-radius: 10px;
 }
+
 /* --- FOOTER --- */
 footer {
     background-color: #18181f;
@@ -119,16 +124,19 @@ footer p {
     color: #888899;
     font-size: 0.85rem;
 }
-/* Tablettes */
-@media screen and (max-width: 900px) {
-    .galerie {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
 
-/* Téléphones */
-@media screen and (max-width: 600px) {
-    .galerie {
-        grid-template-columns: 1fr;
+/* --- RESPONSIVE MOBILE & TABLETTE --- */
+@media screen and (max-width: 900px) {
+    .conteneur {
+        flex-direction: column;
+        width: 95%;
+    }
+    .conteneur img {
+        width: 100%;
+        max-width: 300px;
+        margin-top: 20px;
+    }
+    .texte {
+        text-align: left;
     }
 }
