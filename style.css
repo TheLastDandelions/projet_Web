@@ -37,9 +37,11 @@ header a {
 
 main{
     flex: 1;
-    width: 92%;
+    width: 100%;
     max-width: 1000px;
     margin: 0 auto;
+    background-color: black;
+    color: white;
 }
 .intro{
     text-align: center;
@@ -53,7 +55,7 @@ main{
 .galerie article {
     flex: 1;
     display: flex;
-    background-color: #f2f2f2;
+    background-color: #262630;
     flex-direction: column;
     border: 2px solid grey;
     border-radius: 10px;
