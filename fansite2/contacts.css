@@ -1,3 +1,4 @@
+/* Style général */
 * {
     margin: 0;
     padding: 0;
@@ -13,6 +14,7 @@ body {
     min-height: 100vh;
 }
 
+/* --- HEADER & ONGLETS --- */
 header {
     background-color: #18181f;
     padding: 25px 20px;
@@ -43,7 +45,7 @@ header nav ul li a {
     padding: 10px 22px;
     border-radius: 25px;
     font-weight: 600;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.2s ease;
     display: inline-block;
 }
 
@@ -51,83 +53,44 @@ header nav ul li a:hover,
 header nav ul li a.actif {
     background-color: #9146ff;
     color: #ffffff;
+    transform: translateY(-2px);
 }
 
+/* --- CONTENU PRINCIPAL (Formulaire) --- */
 main {
     flex: 1;
-    max-width: 1200px;
-    width: 100%;
-    margin: 0 auto;
-    padding: 50px 20px;
     display: flex;
+    justify-content: center;
     align-items: center;
+    padding: 50px 20px;
 }
 
-.conteneur-contact {
-    display: grid;
-    grid-template-columns: 1fr 1.2fr; /* Grille 2 colonnes */
-    gap: 35px;
-    width: 100%;
-}
-
-.bloc-reseaux,
-.bloc-formulaire {
-    background-color: #18181f;
-    border: 2px solid #262630;
+.contact-container {
+    background-color: #262630;
+    border: 2px solid #3a3a48;
     border-radius: 15px;
-    padding: 30px;
+    padding: 35px;
+    width: 100%;
+    max-width: 500px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
 }
 
-.bloc-reseaux h2,
-.bloc-formulaire h2 {
-    font-size: 1.7rem;
-    color: #ffffff;
-    border-left: 5px solid #9146ff;
-    padding-left: 15px;
+.contact-container h2 {
+    text-align: center;
     margin-bottom: 10px;
+    color: white;
+    font-size: 1.8rem;
 }
 
-.sous-titre {
+.contact-container p {
+    text-align: center;
     color: #a0a0b0;
     font-size: 0.95rem;
     margin-bottom: 25px;
-    line-height: 1.5;
 }
 
-.liste-reseaux {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-.carte-reseau {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-    background-color: #0f0f13;
-    border: 2px solid #262630;
-    border-radius: 12px;
-    padding: 16px 20px;
-    text-decoration: none;
-    transition: border-color 0.3s ease;
-}
-
-.carte-reseau:hover {
-    border-color: #9146ff;
-}
-
-.nom-plateforme {
-    color: #9146ff;
-    font-weight: 700;
-    font-size: 1.1rem;
-}
-
-.pseudo {
-    color: #e0e0e0;
-    font-size: 0.92rem;
-}
-
-.formulaire-contact {
+/* Formulaire */
+form {
     display: flex;
     flex-direction: column;
     gap: 18px;
@@ -139,47 +102,51 @@ main {
     gap: 8px;
 }
 
-.champ label {
+label {
     font-size: 0.95rem;
     font-weight: 600;
     color: #e0e0e0;
 }
 
-.champ input,
-.champ select,
-.champ textarea {
-    background-color: #0f0f13;
-    border: 2px solid #262630;
-    border-radius: 10px;
+input, textarea {
     padding: 12px 15px;
-    color: #ffffff;
-    font-family: inherit;
+    border-radius: 10px;
+    border: 2px solid #0f0f13;
+    background-color: #0f0f13;
+    color: white;
     font-size: 0.95rem;
+    width: 100%;
     outline: none;
+    transition: border-color 0.3s ease;
 }
 
-.champ input:focus,
-.champ select:focus,
-.champ textarea:focus {
+input:focus, textarea:focus {
     border-color: #9146ff;
 }
 
-.bouton-envoyer {
+textarea {
+    resize: vertical;
+}
+
+button {
     background-color: #9146ff;
-    color: #ffffff;
+    color: white;
     border: none;
     border-radius: 25px;
-    padding: 14px 25px;
+    padding: 14px;
     font-size: 1rem;
     font-weight: 700;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    margin-top: 10px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-.bouton-envoyer:hover {
+button:hover {
     background-color: #772ce8;
+    transform: translateY(-2px);
 }
 
+/* --- FOOTER --- */
 footer {
     background-color: #18181f;
     padding: 25px 20px;
@@ -199,16 +166,14 @@ footer nav ul {
 footer nav ul li a {
     color: #a970ff;
     text-decoration: none;
+    font-size: 0.95rem;
+}
+
+footer nav ul li a:hover {
+    text-decoration: underline;
 }
 
 footer p {
     color: #888899;
     font-size: 0.85rem;
-}
-
-/* Responsive pour les contacts */
-@media (max-width: 850px) {
-    .conteneur-contact {
-        grid-template-columns: 1fr; /* Empile les blocs sur tablette/mobile */
-    }
 }
